@@ -1,6 +1,5 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import themePlugin from "@replit/vite-plugin-shadcn-theme-json";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -9,8 +8,8 @@ const __dirname = dirname(__filename);
 
 export default defineConfig(({ mode }) => {
   return {
-    base: "/my_portfolio/", // <--- ADD THIS LINE HERE
-    plugins: [react(), themePlugin()],
+    base: "/my_portfolio/",
+    plugins: [react()],
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src"),
